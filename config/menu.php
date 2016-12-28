@@ -1,6 +1,8 @@
 <?php
 
 use Spatie\Menu\Laravel\Menu;
+use Spatie\Menu\Laravel\Html;
+use Spatie\Menu\Laravel\Link;
 
 //Menu::macro('fullsubmenuexample', function () {
 //    return Menu::new()->prepend('<a href="#"><span> Multilevel PROVA </span> <i class="fa fa-angle-left pull-right"></i></a>')
@@ -24,7 +26,7 @@ Menu::macro('adminlteSeparator', function ($title) {
 Menu::macro('sidebar', function () {
     return Menu::adminlteMenu()
         ->add(Html::raw('HEADER')->addParentClass('header'))
-        ->action('HomeController@index', 'Home')
+        ->action('HomeController@index', '<i class="fa fa-link"></i>Home')
         ->link('http://www.acacha.org', 'Another link')
 //        ->url('http://www.google.com', 'Google')
         ->add(Menu::adminlteSeparator('Acacha Adminlte'))
